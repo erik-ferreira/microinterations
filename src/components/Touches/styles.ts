@@ -8,9 +8,6 @@ export const styles = StyleSheet.create({
   },
 
   box: {
-    width: 100,
-    height: 100,
-    backgroundColor: "#7159c1",
     borderRadius: 12,
   },
 });
