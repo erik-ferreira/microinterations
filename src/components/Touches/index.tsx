@@ -50,5 +50,3 @@ export function Touches() {
     </View>
   );
 }
-
-// 00:20:00
