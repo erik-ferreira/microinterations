@@ -10,7 +10,7 @@ import { styles } from "./styles";
 export function Pinch() {
   const scale = useSharedValue(1);
 
-  const rotationGesture = Gesture.Pinch()
+  const pinchGesture = Gesture.Pinch()
     .onUpdate((event) => {
       scale.value = event.scale;
     })
@@ -24,7 +24,7 @@ export function Pinch() {
 
   return (
     <View style={styles.container}>
-      <GestureDetector gesture={rotationGesture}>
+      <GestureDetector gesture={pinchGesture}>
         <Animated.View style={[styles.box, animatedStyle]} />
       </GestureDetector>
     </View>

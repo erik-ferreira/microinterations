@@ -11,7 +11,7 @@ export function Pan() {
   const positionX = useSharedValue(1);
   const positionY = useSharedValue(1);
 
-  const rotationGesture = Gesture.Pan().onUpdate((event) => {
+  const panGesture = Gesture.Pan().onUpdate((event) => {
     positionX.value = event.translationX;
 
     positionY.value = event.translationY;
@@ -26,7 +26,7 @@ export function Pan() {
 
   return (
     <View style={styles.container}>
-      <GestureDetector gesture={rotationGesture}>
+      <GestureDetector gesture={panGesture}>
         <Animated.View style={[styles.box, animatedStyle]} />
       </GestureDetector>
     </View>
