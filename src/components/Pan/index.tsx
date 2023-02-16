@@ -9,19 +9,13 @@ import { styles } from "./styles";
 
 export function Pan() {
   const positionX = useSharedValue(1);
-  const positionY = useSharedValue(1);
 
   const panGesture = Gesture.Pan().onUpdate((event) => {
     positionX.value = event.translationX;
-
-    positionY.value = event.translationY;
   });
 
   const animatedStyle = useAnimatedStyle(() => ({
-    transform: [
-      { translateX: positionX.value },
-      { translateY: positionY.value },
-    ],
+    transform: [{ translateX: positionX.value }],
   }));
 
   return (
