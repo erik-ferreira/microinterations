@@ -13,7 +13,10 @@ import {
 import { styles } from "./styles";
 
 const START = 24;
-const LIMIT = Dimensions.get("window").width - 124;
+const SIZE_BOX = 100;
+const PADDING_SCREEN = 24;
+const LIMIT =
+  Dimensions.get("window").width - (START + SIZE_BOX + PADDING_SCREEN);
 
 export function Fling() {
   const position = useSharedValue(START);
